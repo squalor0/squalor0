@@ -13,8 +13,6 @@ This is a custom-built JavaScript/Node.js-based chat system designed to support 
 - Prompt templating by mode (`steps`, `example`, `flashcards`, `quizmaster`)
 - Streaming response handling using a custom `JSONStreamService`
 - Conversational memory
-  
-- Custom quiz mode with local validation
 
 ### `ChatService.js` — Streaming Chat with Mode-Based Prompting
 
@@ -107,19 +105,6 @@ jsonStreamService.on("end", () => {
 - Clean conversational state management
 
 It’s a foundation for building adaptive learning tools and responsive chat systems with local or remote LLMs.
-
-```js
-return jsonStreamService;
-```
-
----
-
-
-
-The `quizmaster` mode runs a structured back-and-forth quiz session:
-- Generates strict JSON-only Q&A objects from a given topic
-- Validates answers locally using partial string matching
-- Tracks who answered correctly first, awarding points
 
 ---
 
